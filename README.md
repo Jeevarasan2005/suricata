@@ -99,4 +99,4 @@ Suricata 8.0.3 · Kali Linux · Metasploitable2 · Ubuntu Server 24.04 · VMware
 
 ## Full Report
 
-For the complete step-by-step writeup, including every command used and every challenge faced, see [docs/IDS_IPS_Project_Report.docx](docs/IDS_IPS_Project_Report.docx).
+For the complete step-by-step writeup, including every command used and every challenge faced, see [Download Project Report (DOCX)](./IDS_IPS_Project_Report.docx)
