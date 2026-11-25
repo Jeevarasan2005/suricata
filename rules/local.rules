@@ -1,0 +1,4 @@
+alert tcp any any -> $HOME_NET !53 (msg:"CUSTOM Possible TCP SYN Scan Detected"; flags:S; flow:to_server; threshold:type both, track by_src, count 20, seconds 60; sid:1000001; rev:3;)
+alert icmp any any -> $HOME_NET any (msg:"CUSTOM Large ICMP Packet - Possible Covert Channel"; itype:8; dsize:>64; sid:1000002; rev:1;)
+alert tcp any any -> $HOME_NET any (msg:"CUSTOM Attempted etc-passwd Access"; flow:to_server,established; content:"/etc/passwd"; nocase; sid:1000003; rev:1;)
+alert tcp any any -> $HOME_NET any (msg:"CUSTOM cmd.exe Execution Attempt Detected"; flow:to_server,established; content:"cmd.exe"; nocase; sid:1000004; rev:1;)

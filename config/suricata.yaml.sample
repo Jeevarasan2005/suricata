@@ -1,0 +1,19 @@
+# This is NOT the full suricata.yaml file.
+# It only shows the key settings I changed from the defaults,
+# so the repository does not include the entire default config.
+
+vars:
+  address-groups:
+    HOME_NET: "[192.168.58.0/24]"
+
+af-packet:
+  - interface: ens33
+    cluster-id: 99
+    cluster-type: cluster_flow
+    defrag: yes
+
+default-rule-path: /var/lib/suricata/rules
+
+rule-files:
+  - suricata.rules
+  - local.rules
